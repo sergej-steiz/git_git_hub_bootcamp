@@ -1,0 +1,47 @@
+slides for this section:
+https://www.canva.com/design/DAEPtdekgz0/FLOqNt4RpDq1aWo1W-Df3A/view?utm_content=DAEPtdekgz0&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+react gitHub repo:
+https://github.com/facebook/react
+
+git-clone - Clone a repository into a new directory
+https://git-scm.com/docs/git-clone
+
+2048 GitHub Repo
+https://github.com/gabrielecirulli/2048
+
+Hiring Without Whiteboards
+https://github.com/poteto/hiring-without-whiteboards
+
+GitHub sample project
+https://gitlab.com/gitlab-tests/sample-project
+
+connecting to GitHub with SSH
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+
+
+
+	git clone https://github.com/gabrielecirulli/2048 
+	### git clone https://github.com/sergej-steiz/RStudio-0.git ###
+	### git clone https://github.com/sergej-steiz/murders.git ###
+        ### git clone https://github.com/sergej-steiz/getCDISC.git ###
+	### git clone https://gitlab.com/gitlab-tests/sample-project.git ###
+
+
+Connecting GitHub with SSH
+	You can test that your local key works by entering ssh -T git@github.com in the terminal:
+
+
+Paste the text below, replacing the email used in the example with your GitHub email address.
+	ssh-keygen -t ed25519 -C "sergius.steiz@gmx.de"
+
+	
+
+
+
+
+
+
+
+

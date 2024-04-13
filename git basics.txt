@@ -1,0 +1,18 @@
+slides:
+https://www.canva.com/design/DAEPH_Lq4Wk/wGpxJyUvCHfQT3jeXcs-Ww/view?utm_content=DAEPH_Lq4Wk&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+git add docs:
+https://git-scm.com/docs/git-add
+
+git commit docs:
+https://git-scm.com/docs/git-commit
+
+git log docs:
+https://git-scm.com/docs/git-log
+
+
+book for copy in example
+https://gutenberg.net.au/ebooks02/0200041h.html
+
+committing Basics Exercise
+https://plum-poppy-0ea.notion.site/Committing-Basics-Exercise-3dc1ef1873ce45e68cedd2265710d7d8

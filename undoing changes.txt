@@ -1,0 +1,162 @@
+slyde:
+https://www.canva.com/design/DAEPZZHOafo/9A9-EiaOr5ODgIyT_GBpYw/view?utm_content=DAEPZZHOafo&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+git-restore - Restore working tree files
+https://git-scm.com/docs/git-restore
+
+git-reset - Reset current HEAD to the specified state
+https://git-scm.com/docs/git-reset
+
+git-revert - Revert some existing commits
+https://git-scm.com/docs/git-revert
+
+
+
+sone usefull command
+	
+	git log --oneline    ##### here you can copy hash of any commit you want to see ######
+	git checkout xxxxx   ##### xxxxx is the commit id above #####
+	git branch 	     ##### check all branches #####
+	git switch xxxxx     ##### xxxxx name of the branch, or master if you stay in the same branch and about to leave DETACHED HEAD modus ######
+
+It is possible to create a new branch and to switch to it. You can now make and save changes, since HEAD is no longer detached.
+	git log --oneline           ##### copy your commit id you want to continue with a new branch #####
+	git status
+	git checkout xxxx           ##### xxxxx is the commit id above #####
+## or you can work with 
+##	git checkout HEAD~1 (or HEAD~2 HEAD~3  etc.)
+##
+	git switch -c chapter2-redo ##### create new brach chapter2-redo and switch to it, based upon a particular commet ######
+###  do some work, change add files etc. ####
+	git add .
+	git commit -m "start second stab at chapter 2"
+
+
+Suppose you've made some changes to a file but don't want to keep them. To revert the file back to whatever it looked like when you last commited, you can use:
+	git checkout HEAD <filename>   #### or git checkout -- file1 file2 ..####
+
+Git Restore is a brand new Git command that helps with undoing operations.
+	git restore dog.txt ##### will remove all changes for not staged dog.txt file to the last commit #####
+
+	git restore --source HEAD~1 home.html  ##### will restore the contents of home.html to its state from the commit prior to HEAD. #####
+					       ##### You can also use a patricular hash as the source. #####
+
+	git restore dog.txt  ### will take the latest commit version of dog,txt file ###
+
+If you have accidentally added a file to your staging area with git add and you don't wish to include it in the next commit
+Use the --staged option like this 
+	git restore --staged <filename>  ##git restore --staged secrets.txt##
+
+Suppose you've just made a couple of commits on the master branch, but you actually meant to make them on a separate branch instead.
+
+	git log --oneline
+	git reset dcba46b ###commit hash i want to reset the files##
+	git status ## you can see files are modified yet , changes not staged ##
+	git switch -c badstuff   #all the changes in commits after the commit with hash dcba46b now in worikig directory , not staged #
+	git add .
+	git commit -m "add bad stuff"
+	git switch master
+
+Suppose you want to undo both the commits AND the actual changes in your files. you can use the --hard option. for example,
+	git reset --hard HEAD~1 ##will delete the last commit and associated changes.##
+	git reset --hard <commit> ##same##
+
+Git Revert is similar to  git reset in that way that they both "undo" changes, but they accomplish it in different ways.
+git reset actually moves the brach pointer backwards, eliminating commits.
+
+git revert instead creates a brand new commit which reverses/undos the changes from a commit. Becuse it results in a new commit, you will be prompted to 
+enter a commit message.
+
+In summary, git reset is used to modify the commit history and move branches to a different state, while git revert is used to create new commits that undo 
+  changes made by existing commits while preserving the commit history. 
+  Choose the appropriate command based on your specific requirements and the impact you want to have on the repository's history.
+
+
+Undoing Things Exercise
+https://plum-poppy-0ea.notion.site/Undoing-Things-Exercise-d2fc1825dcc047c291a9a960848fdf71
+
+==================================================================================================================================================================================================
+This exercise is based around the Beatles' song Yesterday, and the evolution of its lyrics over time. 
+
+Clone the repo I've created for you, using the following command (make sure you're not already in a repo when you run it!)
+	git clone https://github.com/Colt/yesterday-exercise
+
+Change into the newly created directory.  You should see a file called lyrics.txt
+	cd yesterday-exercise
+	ls -l
+
+Take a look at the commit history.  You should see 8 commits on the master branch.
+	git status
+	git log --oneline
+
+Go "back in time" by checking out the very first commit.  
+Remember, this puts you in detached HEAD.  
+Take a look at the lyrics.txt file to verify things have changed.  
+Then, leave detached HEAD by returning to the master branch.
+	git checkout 485a339   # hash for a very first commit -- Go "back in time" by checking out the very first commit.  
+	git status    	       # HEAD detached at 485a339
+	git branch             # master
+	git switch master      # leave detached HEAD by returning to the master branch.	
+
+	
+Go back to the commit where the original version of the lyrics was completed.  
+The commit has the message "finish original lyrics".  
+Create a new branch called scrambled-eggs based upon this commit.
+	git log --oneline
+	git checkout cdd927c          # The commit has the message "finish original lyrics"
+	git switch -c scrambled-eggs  # Create a new branch called scrambled-eggs based upon this commit.
+
+Go back to the master branch
+	git switch master
+
+Delete everything in the lyrics.txt file.  Save the file. 
+
+Oh no, that was a mistake!  USING A GIT COMMAND, discard the changes you made to lyrics.txt since the last commit. We saw a couple of ways of achieving this
+	git restore lyrics.txt
+
+Suddenly you get a creative itch! You want to write your own parody lyrics!  Replace the contents of lyrics.txt with the following lyrics (from this website: http://www.amiright.com/parody/60s/thebeatles1981.shtml)	
+
+404
+Guess this ain't the page you're looking for
+On this website there are thousands more
+With no error 404
+
+Suddenly
+This is not the page you thought you'd see
+But it's not an error 403
+Yes, 404s come easily
+
+Add and commit the changes on the master branch
+	git commit -a -m "my own parody lyrics"
+
+Add this to the bottom of the lyrics.txt file:
+
+Why it has to show, I don't know
+Or what it's for
+You typed something wrong?
+Here's no song - it's 404
+
+404
+Adding 1% to twenty score
+(I put that line in 'cause it scans, no more)
+"Goodbye" from error 404
+
+Add and commit the changes to the master branch
+	git add .
+	git commit -m "more my own parody lyrics"
+
+After more consideration, you realize that you actually don't want the previous two commits (the 404 parody lyrics) on the master branch.  You want to move them to a new branch!
+Use a git command to "undo" the prior two commits on master.  Make sure you KEEP THE CHANGES IN YOUR WORKING DIRECTORY.  Just undo the two git commits.  Your lyrics.txt file should still contain the 404 lyrics.
+	git log --oneline
+	git reset f199959   
+
+Create a new branch called 404, switch to it, and add and commit the 404 lyrics in your working directory.
+	git switch -c 404
+	git add .
+	git commit -m "put my lyrics here"
+
+Switch back to master and make sure lyrics.txt contains the actual lyrics to Yesterday
+	git switch master
+
+
+

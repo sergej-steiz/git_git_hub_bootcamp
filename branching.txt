@@ -1,0 +1,97 @@
+git branching slyde:
+https://www.canva.com/design/DAEPOwX2Zzs/QZsec8RgUmTA5T5zSLkPgQ/view?utm_content=DAEPOwX2Zzs&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+git-checkout - Switch branches or restore working tree files
+https://git-scm.com/docs/git-checkout
+
+Branching Exercise
+https://plum-poppy-0ea.notion.site/Branching-Exercise-b5460c881d56400cb046357d9a430bf8
+
+1. Make a new folder called Patronus
+  	-- mkdir Patronus
+2. Make a new git repo inside the folder (make sure you're not in an existing repo)
+	-- cd Patronus
+	-- git status
+	-- git init
+3. Create a new file called patronus.txt (leave it empty for now)
+	-- touch patronus.txt
+4. Add and commit the empty file, with the message "add empty patronus file"
+	-- git commit -a -m "add empty patronus file"
+5. Immediately make a new branch called harry and another branch called snape (both based on the master branch)
+	-- git branch harry
+	-- git branch snape
+6. Move to the harry branch using the "new" command to change branches.
+	-- git switch harry
+7. In the patronus.txt file, add the following:
+HARRY'S PATRONUS
+
+   /|       |\
+`__\\       //__'
+   ||      ||
+ \__`\     |'__/
+   `_\\   //_'
+   _.,:---;,._
+   \_:     :_/
+     |@. .@|
+     |     |
+     ,\.-./ \
+     ;;`-'   `---__________-----.-.
+     ;;;                         \_\
+     ';;;                         |
+      ;    |                      ;
+       \   \     \        |      /
+        \_, \    /        \     |\
+          |';|  |,,,,,,,,/ \    \ \_
+          |  |  |           \   /   |
+          \  \  |           |  / \  |
+           | || |           | |   | |
+           | || |           | |   | |
+           | || |           | |   | |
+           |_||_|           |_|   |_|
+          /_//_/           /_/   /_/
+
+8. Add and commit the changes, with the commit message "add harry's stag patronus"
+	-- git commit -a -m "add harry's stag patronus"
+
+9. Move over to the snape branch using the "older" command to change branches.
+	-- git checkout branch
+
+10. Put the following text in  the patronus.txt file:
+SNAPE'S PATRONUS
+                   .     _,
+                   |`\__/ /
+                   \  . .(
+                    | __T|
+                   /   |
+      _.---======='    |
+     //               {}
+    `|      ,   ,     {}
+     \      /___;    ,'
+      ) ,-;`    `\  //
+     | / (        ;||
+     ||`\\        |||
+     ||  \\       |||
+     )\   )\      )||
+     `"   `"      `""
+11. Add and commit the changes on the snape branch with the commit message "add snape's doe patronus"
+	-- git commit -a -m "add snape's doe patronus"	
+
+12. Next, create a new branch based upon the snape branch called lily
+	-- git status
+	-- git branch lily
+13. Move to the lily branch
+	-- git switch lily
+
+14. Edit the patronus.txt file so that it says LILY'S PATRONUS at the top instead of SNAPE'S PATRONUS (leave the doe ascii-art alone)
+
+15. Add and commit the change with the message "add lily's doe patronus"
+
+16. Run a git command to list all branches (you should see 4)
+	-- git branch
+
+17 Bonus: delete the snape branch (poor Snape)
+	-- git branch -d snape
+
+
+
+

@@ -1,0 +1,50 @@
+Configuration
+	git config: Configure Git settings either globally or on a per-repository basis.
+
+Repository Initialization
+	git init: Initialize a new Git repository in the current directory.
+	git clone: Clone a repository from a remote source.
+	
+Staging and Committing
+	git add: Add file changes to the staging area.
+	git status: Check the status of the working directory and staging area.
+	git commit: Commit staged changes to the repository.
+	git commit -m "message": Commit changes with a specified message.
+	
+Branching and Merging
+	git branch: List, create, or delete branches.
+	git checkout: Switch branches or restore working tree files.
+	git merge: Merge changes from one branch into another.
+	git branch <branch_name>: Create a new branch with the specified name.
+	git branch -d <branch_name>: Delete the specified branch.	
+	git checkout -b <branch_name>: Create a new branch and switch to it.
+	git switch -c: <branch_name>: Create a new branch and switch to it.
+	git merge <branch_name>: Merge changes from the specified branch into the current branch.
+	git merge --abort: Abort the current merge and reset the index and working tree to the state before the merge.
+	git rebase <branch_name>: Reapply commits on top of another base tip.
+	
+Remote Repositories
+	git remote: Manage remote repositories.
+	git fetch: Download objects and refs from another repository.
+	git pull: Fetch from and integrate with another repository or a local branch.
+	git push: Update remote refs along with associated objects.
+	
+Undoing Changes
+	git restore: Restore working tree files.
+	git reset: Reset current HEAD to the specified state.
+	git revert: Revert some existing commits.
+	
+Logging and Diffing
+	git log: View commit history.
+	git log <file>: View commit history for a specific file.
+	git diff: Show changes between commits, commit and working tree, etc.
+	git diff <commit1> <commit2>: Show the difference between two commits.
+	git diff --staged: Show changes between the index and the HEAD commit.
+	git difftool: Open a graphical diff tool to view changes.
+	git show <commit>: Show changes introduced by the specified commit.
+	git blame <file>: Show who last modified each line of a file and when.
+	
+Miscellaneous
+	git ignore: Specify intentionally untracked files to ignore.
+	git tag: Create, list, delete, or verify tags.
+	

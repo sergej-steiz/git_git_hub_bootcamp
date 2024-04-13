@@ -1,0 +1,28 @@
+link to the slyde:
+https://www.canva.com/design/DAEXMibkysc/uO4KEygGGLG13bkHSnzbgQ/view?utm_content=DAEXMibkysc&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+git-log - Show commit logs
+https://git-scm.com/docs/git-log
+
+git-commit - Record changes to the repository
+https://git-scm.com/docs/git-commit
+
+this is not the web page you are looking for
+https://github.com/marak/Faker.js/
+
+An Open Source Machine Learning Framework for Everyone
+https://github.com/tensorflow/tensorflow
+
+
+A private messenger for Android.
+https://github.com/signalapp/Signal-Android
+
+Create useful .gitignore files for your project
+https://www.toptal.com/developers/gitignore
+
+gitignore - Specifies intentionally untracked files to ignore
+https://git-scm.com/docs/gitignore
+
+You can configure Git to ignore files you don't want to check in to GitHub.
+https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+

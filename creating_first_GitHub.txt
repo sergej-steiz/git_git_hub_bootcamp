@@ -1,0 +1,41 @@
+2 options hwo to get your repo on github.
+
+1. i have my repo localy, i need to create an empty GitHub repo. then connect to my local repo and push all to GitHub
+
+2. no local and GitHub repo. create a new GitHub repo, clone it to local one , and work locally.
+
+to 1 :
+  create ab empty GitHub repo
+	
+	git remote -v ### to view any existing remotes for your repository
+	git remote add origin https://github.com/sergej-steiz/The-Git-Github-Bootcamp.git
+	git remote -v ### check if that works
+	### git remote rename <old> <new> ###
+	### git remote remove <name> ###
+
+
+
+
+
+from github:
+ create a new repository on the command line
+	echo "# The-Git-Github-Bootcamp" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git branch -M main
+	git remote add origin https://github.com/sergej-steiz/The-Git-Github-Bootcamp.git
+	git push -u origin main
+
+
+ or push an existing repository from the command line
+	git remote add origin https://github.com/sergej-steiz/The-Git-Github-Bootcamp.git
+	git branch -M main
+	git push -u origin main
+
+
+git-push - Update remote refs along with associated objects
+	https://git-scm.com/docs/git-push
+
+
+

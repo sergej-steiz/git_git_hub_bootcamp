@@ -1,0 +1,13 @@
+https://www.canva.com/design/DAEQbZDcRTs/eoJbTLVE8BolmKIyFjGByQ/view?utm_content=DAEQbZDcRTs&utm_campaign=designshare&utm_medium=link&utm_source=editor#17
+
+official git homepage:
+https://git-scm.com/
+
+stackshare:
+https://stackshare.io/git
+
+GitHub and Government:
+https://government.github.com/community/
+
+book:
+https://github.com/HoTT/book

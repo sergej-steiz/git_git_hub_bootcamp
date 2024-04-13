@@ -1,0 +1,15 @@
+slides for this section:
+https://www.canva.com/design/DAEXMu7dx04/YOhzvUC8w3J43Er_njvMnQ/view?utm_content=DAEXMu7dx04&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+
+git for windows:
+https://git-scm.com/download/win
+
+visual studio code:
+https://code.visualstudio.com/
+
+MAC git instalation:
+https://sourceforge.net/projects/git-osx-installer/
+
+Git Kraken download:
+https://www.gitkraken.com/
