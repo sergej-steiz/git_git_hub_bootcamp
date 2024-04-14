@@ -1,0 +1,11 @@
+to remove any folder use:
+    rm -rf <folder name>
+    git status    ###you will see which files in this folder were removed ###
+    git add .     ### add those changes ####
+    git commit -m "put your message here" #### commit changes ####
+    ###now switch to the second branch <empty> ####
+    git switch empty
+    touch summary.txt ###create a blank txt file ###
+    add .
+    git commit -m "add summary file"
+    git log
