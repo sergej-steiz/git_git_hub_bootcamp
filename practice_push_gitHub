@@ -9,3 +9,4 @@ to remove any folder use:
     add .
     git commit -m "add summary file"
     git log
+    git push origin master
