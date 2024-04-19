@@ -10,3 +10,43 @@ to remove any folder use:
     git commit -m "add summary file"
     git log
     git push origin master
+
+
+    The -u option
+        git push -u origin master
+    the -u option allwos to set the upstream of the branch we're pushing. You can think of this as a link 
+    connecting our local branch to a branch on GitHub. 
+    Running git push - origin master sets teh upstreams of the local master branch so that it tracks the master
+    branch on the origin repo.
+
+
+    Option 2 : Start from Scratch
+    if you haven't begun work on your local repo, you can...
+        *Create a brand new repo on GitHub
+        *Clone it down to your machine
+        *Do some work locally
+        *Push up your changes to GitHub
+
+    make a new Repo on GitHub
+        -click new ot + sign (new reposotory)
+        -get name of it (public or private)
+        -clone down to my mashine
+        -1. copy the URL of the new repo
+        -2. navigate to your distinaton with git shell
+        -3. git clone <https://github.com/xxx/xxxx/demo.git>   ##put the URL of your new repo on github##
+        -4. cd <folder name>    ## empty folder ##
+        -git status     ##you will see it is a git repo##
+        -git remote -v  ## pre configured remote called origin ##
+        -touch <filename.txt>  ##create a new file, open it and put some text into##
+        -git status
+        -git add .
+        -git commit -m "add my first 2 chickens"
+        -git push origin master  ## now push your updates to github##
+
+Rename your branch:
+    -git branch ##check your branches##
+    -git branch -M main  ## rename to main your current branch ##
+    -git branch
+    
+
+

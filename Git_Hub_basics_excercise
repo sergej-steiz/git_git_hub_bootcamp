@@ -1,0 +1,65 @@
+1. Create a new repository locally on your machine.
+    - mkdir GitHub_basics_excercise
+    - git status  # just to check if no repo there #
+    - git init
+ 
+2. Create a new Github repository. Name it whatever you want.
+    #new ropsotory on github.com -> GitHub_basics_excercise
+
+3. Connect your local repo to the Github repo.
+    - git remote # or git remote -v to view any existing remotes for my local repo #
+    - git remote add origin https://github.com/sergej-steiz/GitHub_basics_excercise.git
+
+
+4. Optional: rename the default branch from master to main.
+    - git branch -M master main
+
+5. Make a new file called favorites.txt  Leave it empty. Make your first commit on the main branch.
+    - touch favorites.txt
+    - git add .
+    - git commit -m "my first commit to main branch"
+
+6. Push up your main branch to Github! Make sure you see your empty favorites.txt file on Github.
+    - git push -u origin main
+
+7. Next, create two branches: foods and movies
+
+    - git branch foods
+    - git branch movies
+
+8. Switch to the foods branch.  Add three (or more) of your favorite foods to the favorites.txt file.  Add and commit your changes on the foods branch.
+
+    - git switch foods
+    ## add 3 lines in favorites.txt file ###
+    - git add .
+    - git commit -m "add my 3 favorite foods"
+    
+9. Switch to the movies branch and add three or more of your favorite movies to the favorites.txt file.  Add and commit your changes on the movies branch.
+    - git switch movies
+    ## add 3 lines in favorites.txt file ##
+    - git add .
+    - git commit -m "add my 3 favorite movies"
+    
+10. Push up your foods branch to Github. Make sure you see it on Github!
+    - git branch  ##check whre you are##
+    - git switch foods
+    - git push -u origin foods
+
+
+11. Push up your movies branch to Github.  Make sure you see it on Github!
+    - git branch  ##check whre you are##
+    - git switch movies
+    - git push -u origin movies
+
+12. Merge the foods branch into the main branch.  Then merge the movies branch into the main branch.  If necessary, resolve conflicts so that you end up with your favorite foods   and   favorite movies in the same favorites.txt file. 
+
+    - git switch master  ### switch to receiving branch ##
+    - git merge movies
+    - git merge foods 
+    ### go to file  favorites.txt in the main branch and remove konfict markers ##
+    - git add favorites.txt
+    - git commit -m "Remove the conflict markers afrter merging foods"
+
+
+13. Push up the latest work on your main branch to Github.
+    - git push -u origin main
