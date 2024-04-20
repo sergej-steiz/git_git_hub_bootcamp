@@ -1,0 +1,56 @@
+Slidies  (Fetching and Pulling):
+https://www.canva.com/design/DAEPyYicrxQ/KDWmeo7Kqssw3z3w2PoaAg/view?utm_content=DAEPyYicrxQ&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+
+
+1) create a new GitHub reposotory  (he NOT enabled "add readmy")
+2) create a new file on GitHub (as usual a simple txt file)
+3) on GitHub commit this file (commit new file button)
+4) clone this repo on your machine
+  - copy the URL of the repo
+  - navigate to your local folder where to store cloned repo (using mkdir cd etc.)
+  - git status ## to check if no .git folders for this new folder ##
+  - git clone <URL https:,,,,,,,>
+  - ls ## check if the cloned folder is there ##
+  - cd <foldername> ##go there##
+  - git branch ### will give one branch -> main ##
+  - git branch -r ## will show you a remote tracking branch   so like : main and origin/main ##
+to demonstarte that origin/main will stay on the same slote (reference on the cloned status) he will do some updates on the text files
+and do a few commits -->
+  - git add <filename>  ### add updated file ###
+  - git commit -m "add bla bla"
+  - git log ## now we have 2 commits locally on the main branch ##
+  - git status ##you can see the message: Your branch is ahead of "origin/main" by 1 commit ##
+  so if i do ohter updates on my work..
+    -git add <filename>
+    -git commit -m "bla bla"
+    -git status ## now we can see your main branch is ahead of "origing/main" by 2 commit ##
+    -git checkout origin/main ## so i can go to the origin/main slot / reference / bookmark, in detached HEAD mode##
+    ### up to this stage i can do a new branch and start to work form here ###
+    ### or i can switch back to my current status of work ##
+    -git switch main
+    -git log
+    -git push origin main ###push my both new commits on github###
+    -git status ### no longer "x commits ahead note"##
+    -git checkout origin/main ### shows now on the recently commited slot /reference too ##
+    
+    =======================working with remote branches===========================
+how we do work with a GitHub branch wit several branches locally?:
+example of repo we are using here: https://github.com/Colt/remote-branches-demo
+
+clone the repo above 
+  -copy URL <https://github.com/Colt/remote-branches-demo.git>
+  - mkdir FetchingPulling
+  - cd FetchingPulling
+  - git status   ## make sure there is not .git folder
+  - git clone https://github.com/Colt/remote-branches-demo.git
+  - ls 
+  - cd remote-branches-demo
+  - git branch ### actually only main branch is visiable ##
+  - git branch -r ### however this one will show all branches ###
+  - git checkout origin/food ## will connect me with food branch    however it is in detached HEAD state, pls use switch ##
+  ### git switch <branch> makes me a local <xxx> branch AND sets is up to track the remote branch origin/<xxx>
+  - git switch movies   ### similar to git checkout --track origin/movies ##
+
+
+
