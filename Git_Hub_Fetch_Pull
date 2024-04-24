@@ -51,6 +51,47 @@ clone the repo above
   - git checkout origin/food ## will connect me with food branch    however it is in detached HEAD state, pls use switch ##
   ### git switch <branch> makes me a local <xxx> branch AND sets is up to track the remote branch origin/<xxx>
   - git switch movies   ### similar to git checkout --track origin/movies ##
+similar to all other branches
+  - git branch -r ###list all remote branches ##
+  - git switch fantasy
+
+  ============================git FETCH - basics=====================================
+  Fetching (git fetch) is going to take remote changes, so stuff comming from GitHub repo, and bring them down to the local repository, NOT into our working directory (git pull)!
+
+    -git fetch <remote>  ##defualt remote is origin
+    -git fetch <remote> <branch> ## git fetch origin master we can also fetch a specific branch from a remote
+  I now have those changes on my machine, but if I want to see them I have to checkout origin/master. My local master branch is untouched!
+  
+    -git fetch origin
+    -git status
+        "your branch is behind 'origin/movies' by 1 commit and can be fast-forwarded"
+    -git checkout orign/movies
+        #i can take a look what is new, ind detached head mode#
+    -git log 
+      #shows all commits on the gitHub branch too #
+    -git switch movies
+      # i am still behind origin/movies      #
+    -git fetch origin food
+    -git status
+    -git checkout origin/food
+    
+    ============================git PULL - basics ========================================
+    git pull is another command we can use to retrieve changes from a remote repository. Unlike fetch, pull
+    acutally updates our HEAD branch with whatever changes are retrieved from the remote.
+    "go and download data from Github AND immediately update my local repo with those changes"
+                              git pull = git fetch + git remote
+
+    syntax :       git pull <remote> <branch>
+    short syntax : git pull
+
+    if we run git pull without specifying a paricular remote or branch to pull from (short syntax), git assumes the following:
+      * <remote> will default to origin
+      * <branch> will defualt to whatever tracking connections is configured for your current branch
+      
+
+
+
+  
 
 
 
