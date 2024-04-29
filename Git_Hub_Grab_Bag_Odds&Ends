@@ -1,0 +1,30 @@
+topics:
+-Repo Visibility:Public vs Private
+-Adding GitHub Collaborators
+-Readme files
+-Writing Markdown
+-GitHub Gists
+-GitHub Pages
+
+README files
+is used to communicate important information about a repository including
+  -What the project does
+  -How to run the project
+  -Why it's noteworthy
+  -Who maintains the project
+   README demo Repo 1:
+    https://github.com/jasontaylordev/CleanArchitecture
+   README demo Repo 2:
+   https://github.com/explosion/spaCy
+   README demo Repo 3:
+   https://github.com/facebook/react
+
+   you also may find README.md files, which are MARKDOWN files
+   MARKDOWN is a syntax to generate formatted text.
+
+MARKDOWN docs:
+   https://daringfireball.net/projects/markdown/
+
+    https://markdown-it.github.io/
+
+    
