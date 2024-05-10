@@ -1,3 +1,54 @@
 link to the slides:
 https://www.canva.com/design/DAEP32iZwVc/e8vtEkcNNATEdm3_lPKU0A/view?utm_content=DAEP32iZwVc&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
+Centrlized Workflow
+means everyone works on Master/Main or any one SINGLE branch.
+    it is straghtforward and can work for tiny teams, but it has quite a few shortcommings.
+
+The Problem:
+    -   lots of time spent resolving conflicts and merging code
+    -   no one can work an anything without disturbing the mian codebase. How do you try adding something radically different in? How do you experiment?
+    -   the only way to collaborate on a feature together with another teammate is to push incomplete code to master. Other teammates have now broken code...
+
+Solution :
+work on Feature Branches!!
+
+Rather than working on directly on master/main, all new development should be done on separate branches!
+    -> Treat master/main branch as the official project history
+    -> Multiple teammates can collaborate on a single feature and share code back and forth without polluting the master/main branch
+    -> Master/Main branch won't contain broken code (or at least, it won't unless someone messes up)
+
+Merging In Feature Branches
+At some point new the work on feature branches will need to be merged in to the master branch!
+There are a couple of options for how to do this:
+    1. Merge at will, without any sort of discussion with teammates. JUST DO IT WHENEVER YOU WANT.
+    2. Send an email or chat message or something to your team to discuss if changes should be merged in.
+    3. Pull Requests!
+
+
+    example for 1/2 
+    - git status               #check your current branch , here are you updates, they can be pulled from github if done by someone other
+    - git switch main          #switch to the mail brach
+    - git pull origin main     # always good to check if there is any updates to main. if no "already up to date."
+    - git merge <branchname>   # if all good -> fast forward
+    - git status               # now i can push main back up
+    - git push origin main
+    on other user site then:
+    - git switch main
+    - git pull origin main
+
+    3. Pull Request
+    Pull Requests are feature built in to products like GitHub & Bitbucket. They are not native to Git itself.
+    They allow developers to alert team-members to new work that needs to reviewed. They provide a mechanism to approve or reject
+    the work on a given branch. They also help facilitate discussion and feedback on the specified commits.
+      "I have theis new stuff i want to merge in to the master branch...what do you all think about it?" 
+      https://github.com/facebook/react/pulls
+
+      The Workflow
+      1. Do some work locally on a feature branch
+      2. Push up the feature branch to GitHub
+      3. Open a pull request using the feature branch just pushed up to Github
+      4. Wait for the PR to be approved and merged. Start a discussion on the PR. This part depends on the team structure
+
+
+
