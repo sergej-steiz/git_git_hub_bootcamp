@@ -51,4 +51,19 @@ There are a couple of options for how to do this:
       4. Wait for the PR to be approved and merged. Start a discussion on the PR. This part depends on the team structure
 
 
+Merging Pull Requests with Conflicts
+My Boss's Local Machine
+My Boss can merge the branch and resolve the conflicts locally..
+
+Switch to the branch in question, Merge in main and resolve the conflicts.
+    -git fetch origin
+    -git switch <my-new-feature-branch>
+    -git merge main
+    -> fix conflicts
+Switch to main. Merge in the feature branch (now with no conflicts). Push changes up to GitHub.
+    -git switch main
+    -git merge <my-new-feature-branch>
+    -git push origin main
+
+
 
