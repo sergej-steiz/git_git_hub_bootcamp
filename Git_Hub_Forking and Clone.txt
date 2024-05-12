@@ -1,0 +1,11 @@
+#Forking and Clone
+
+The "fork and clone" workflow is different from anything we have seen sofar. Instead of just one centralized Github reposotory,
+every developer has their own Github reposotory in addition to "main" reposotory. Developers make changes and push to their own forks
+before making pull requests. It is very commonly used on large open-source projects where there may be thousands of contriburors with 
+only a couple maintainers.
+
+Forking is a GitHub feature (not Git). Forking allows us to create personal copies of other peoples' reposotories. We call those 
+copies a "fork" of the original.
+
+When we fork a repo, we're basically asking GitHub "Make me own copy of this repo please".
